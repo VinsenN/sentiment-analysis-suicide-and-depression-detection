@@ -1,5 +1,6 @@
 # Sentiment Analysis: Suicide and Depression Detection
-Link: https://suicide-depression-detection.herokuapp.com/
+Web Application Link: https://suicide-depression-detection.herokuapp.com/ <br>
+Machine Learning Model Link: ___
 
 ## About
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt facilisis viverra. Vestibulum at ipsum elit. Donec lacus erat, hendrerit et ante eu, varius laoreet dui. Cras ut neque ut risus tincidunt gravida at a nibh. Phasellus vestibulum dictum sem porta cursus. Praesent ac leo nisi. Aliquam accumsan, felis ut laoreet posuere, nunc eros commodo purus, et suscipit arcu dolor sit amet diam. Suspendisse eu justo vitae dolor facilisis tincidunt et eget magna. Nulla suscipit nunc a interdum lacinia. (jelasin tentang sentimentnya + kegunaan, nanti diubah). <br> <br>
