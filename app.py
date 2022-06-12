@@ -1,15 +1,22 @@
-# notes:
-# before running in local, make sure flask, pickle, and contractions installed
-
 from flask import Flask, request, render_template
 
-from models.preprocess import *
+from models.preprocess import preprocess_all
+from models.vectorizer import get_w2v_arr, get_d2v_arr
 import pickle
+import numpy as np
+
+from gensim.models import Word2Vec
+from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+
+from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
 
 count_vect = pickle.load(open("models/vectorizer.pickle", 'rb')) # CountVectorizer
-model = pickle.load(open('models/model.sav','rb')) # MultinomialNB
+w2v_model = Word2Vec.load("models/word2vec.model") # Word2Vec
+d2v_model = Doc2Vec.load("models/doc2vec.model") # Doc2Vec
+
+model = pickle.load(open('models/svm_10_80-20_d2v.sav','rb')) # SVM
 
 @app.route('/', methods=['GET'])
 def show_html():
@@ -18,8 +25,15 @@ def show_html():
 @app.route('/', methods=['POST'])
 def predict():
     message = request.form.get('message')
-    filtered_message = preprocess(message)
-    result = model.predict(count_vect.transform([filtered_message]))[0]
+    filtered_message = preprocess_all(message)
+    filtered_message = [filtered_message]
+
+    transformed_message = [TaggedDocument(words=word_tokenize(w), tags=[str(i)]) for i, w in enumerate(filtered_message)]
+    print(transformed_message)
+    # vectorized_message = get_w2v_arr(filtered_message, w2v_model)
+    vectorized_message = get_d2v_arr(transformed_message, d2v_model)
+
+    result = model.predict(vectorized_message)[0]
     return render_template('index.html', predicted_message = message, prediction = result)
 
 if __name__ == '__main__':
