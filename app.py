@@ -16,7 +16,7 @@ count_vect = pickle.load(open("models/vectorizer.pickle", 'rb')) # CountVectoriz
 w2v_model = Word2Vec.load("models/word2vec.model") # Word2Vec
 d2v_model = Doc2Vec.load("models/doc2vec.model") # Doc2Vec
 
-model = pickle.load(open('models/svm_10_80-20_d2v.sav','rb')) # SVM
+model = pickle.load(open('models/testing.sav','rb')) # SVM
 
 @app.route('/', methods=['GET'])
 def show_html():
@@ -28,12 +28,12 @@ def predict():
     filtered_message = preprocess_all(message)
     filtered_message = [filtered_message]
 
-    transformed_message = [TaggedDocument(words=word_tokenize(w), tags=[str(i)]) for i, w in enumerate(filtered_message)]
-    print(transformed_message)
-    # vectorized_message = get_w2v_arr(filtered_message, w2v_model)
-    vectorized_message = get_d2v_arr(transformed_message, d2v_model)
+    # transformed_message = [TaggedDocument(words=word_tokenize(w), tags=[str(i)]) for i, w in enumerate(filtered_message)]
+    # print(transformed_message)
+    # # vectorized_message = get_w2v_arr(filtered_message, w2v_model)
+    # vectorized_message = get_d2v_arr(transformed_message, d2v_model)
 
-    result = model.predict(vectorized_message)[0]
+    result = model.predict(vectorized_message)
     return render_template('index.html', predicted_message = message, prediction = result)
 
 if __name__ == '__main__':

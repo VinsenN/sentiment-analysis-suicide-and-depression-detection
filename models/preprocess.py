@@ -68,7 +68,9 @@ def slang_to_formal(text):
                      for word in text.split(' ')])
 
 stopword_list = stopwords.words('english')
-stopword_list.remove("not")
+whitelist = ["not", "no", "against"]
+for word in whitelist:
+    stopword_list.remove(word)
 
 def remove_stopwords(text):
     words = word_tokenize(text)
@@ -77,7 +79,11 @@ def remove_stopwords(text):
               if not word in stopword_list]
     return ' '.join(filter)
 
-lemma = spacy.load('en_core_web_sm', parse = True, tag = True, entity = True)
+try:
+    lemma = spacy.load("en_core_web_sm", parse = True, tag = True, entity = True)
+except: # If not present, we download
+    spacy.cli.download("en_core_web_sm")
+    lemma = spacy.load("en_core_web_sm", parse = True, tag = True, entity = True)
 
 def lemmatize_text(text):
     text = lemma(text)
