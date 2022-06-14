@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 
 from models.preprocess import preprocess_all
 from models.vectorizer import get_w2v_arr, get_d2v_arr
+from models.sklearn_model import SKLearn_Model
 import pickle
 import numpy as np
 
@@ -12,9 +13,9 @@ from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
 
-count_vect = pickle.load(open("models/vectorizer.pickle", 'rb')) # CountVectorizer
-w2v_model = Word2Vec.load("models/word2vec.model") # Word2Vec
-d2v_model = Doc2Vec.load("models/doc2vec.model") # Doc2Vec
+# count_vect = pickle.load(open("models/vectorizer.pickle", 'rb')) # CountVectorizer
+# w2v_model = Word2Vec.load("models/word2vec.model") # Word2Vec
+# d2v_model = Doc2Vec.load("models/doc2vec.model") # Doc2Vec
 
 model = pickle.load(open('models/testing.sav','rb')) # SVM
 
@@ -33,7 +34,7 @@ def predict():
     # # vectorized_message = get_w2v_arr(filtered_message, w2v_model)
     # vectorized_message = get_d2v_arr(transformed_message, d2v_model)
 
-    result = model.predict(vectorized_message)
+    result = model.predict(filtered_message)
     return render_template('index.html', predicted_message = message, prediction = result)
 
 if __name__ == '__main__':
