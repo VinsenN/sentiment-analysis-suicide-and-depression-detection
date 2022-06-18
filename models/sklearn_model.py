@@ -1,3 +1,14 @@
+from gensim.models import Word2Vec
+from gensim.utils import effective_n_jobs
+
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.metrics import plot_confusion_matrix, accuracy_score, classification_report, precision_score, f1_score, recall_score
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.svm import LinearSVC
+
 class SKLearn_Model:
     def __init__(self, 
                  threshold: int,
