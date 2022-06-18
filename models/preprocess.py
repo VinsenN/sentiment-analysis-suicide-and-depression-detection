@@ -80,10 +80,10 @@ def remove_stopwords(text):
     return ' '.join(filter)
 
 try:
-    lemma = spacy.load("en_core_web_sm", parse = True, tag = True, entity = True)
+    lemma = spacy.load("en_core_web_sm")
 except: # If not present, we download
     spacy.cli.download("en_core_web_sm")
-    lemma = spacy.load("en_core_web_sm", parse = True, tag = True, entity = True)
+    lemma = spacy.load("en_core_web_sm")
 
 def lemmatize_text(text):
     text = lemma(text)
