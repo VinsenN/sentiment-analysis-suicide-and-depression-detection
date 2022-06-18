@@ -24,3 +24,6 @@ As lecturer
 | Course                                     | Class |
 | :----------------------------------------  | :---- |
 | COMP6576001 - Natural Language Processing  | LA01  |
+
+## License
+[MIT License](LICENSE)
