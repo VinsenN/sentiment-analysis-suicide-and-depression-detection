@@ -12,12 +12,7 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
-
-# count_vect = pickle.load(open("models/vectorizer.pickle", 'rb')) # CountVectorizer
-# w2v_model = Word2Vec.load("models/word2vec.model") # Word2Vec
-# d2v_model = Doc2Vec.load("models/doc2vec.model") # Doc2Vec
-
-model = pickle.load(open('models/testing.sav','rb')) # SVM
+class_model = pickle.load(open('models/svm_tfidf.obj.','rb'))
 
 @app.route('/', methods=['GET'])
 def show_html():
@@ -26,16 +21,15 @@ def show_html():
 @app.route('/', methods=['POST'])
 def predict():
     message = request.form.get('message')
+
+    if len(message) > 100:
+        return render_template('index.html', warning_message = 'exceeded_char_length')
+    elif message.isspace():
+        return render_template('index.html')
+
     filtered_message = preprocess_all(message)
-    filtered_message = [filtered_message]
-
-    # transformed_message = [TaggedDocument(words=word_tokenize(w), tags=[str(i)]) for i, w in enumerate(filtered_message)]
-    # print(transformed_message)
-    # # vectorized_message = get_w2v_arr(filtered_message, w2v_model)
-    # vectorized_message = get_d2v_arr(transformed_message, d2v_model)
-
-    result = model.predict(filtered_message)
-    return render_template('index.html', predicted_message = message, prediction = result)
+    result = class_model.predict(filtered_message)
+    return render_template('index.html', predicted_message = message.strip(), prediction = result)
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
