@@ -14,9 +14,24 @@ from nltk.tokenize import word_tokenize
 
 from collections import Counter
 
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('tokenizers/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
+try:
+    nltk.data.find('tokenizers/wordnet')
+except LookupError:
+    nltk.download('wordnet')
+
+# nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 
 # résumé -> resume
 def remove_accent(text):
