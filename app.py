@@ -5,7 +5,7 @@ from models.sklearn_model import SKLearn_Model
 import pickle
 
 app = Flask(__name__)
-class_model = pickle.load(open('models/svm_tfidf.obj.','rb'))
+class_model = pickle.load(open('models/svm_tfidf.obj','rb'))
 
 @app.route('/', methods=['GET'])
 def show_html():
