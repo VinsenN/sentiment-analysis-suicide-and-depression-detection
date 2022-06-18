@@ -6,9 +6,8 @@ Googgle Collab Link:
 ## Local Deployment
   * Clone project
   * Go to the folder application
+  * Create a virtual environment with virtualenv to prevent **dependencies conflict** (Optional)
   * Run `pip install -r requirements.txt` to install all python libraries needed for the web application.
-
-    Note (Optional):  create a virtual environment with virtualenv to prevent **dependencies conflict**
   * Run `python app.py` and access the webapp on localhost port 3000 (http://localhost:3000/).
 
 ## Authors
