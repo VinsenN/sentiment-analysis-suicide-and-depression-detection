@@ -1,32 +1,14 @@
 # Sentiment Analysis: Suicide and Depression Detection
-Web Application Link: https://suicide-depression-detection.herokuapp.com/ <br>
-Machine Learning Model Link: ___
+Web Application Link: https://suicide-depression-detection.herokuapp.com
 
-## About
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt facilisis viverra. Vestibulum at ipsum elit. Donec lacus erat, hendrerit et ante eu, varius laoreet dui. Cras ut neque ut risus tincidunt gravida at a nibh. Phasellus vestibulum dictum sem porta cursus. Praesent ac leo nisi. Aliquam accumsan, felis ut laoreet posuere, nunc eros commodo purus, et suscipit arcu dolor sit amet diam. Suspendisse eu justo vitae dolor facilisis tincidunt et eget magna. Nulla suscipit nunc a interdum lacinia. (jelasin tentang sentimentnya + kegunaan, nanti diubah). <br> <br>
-Feature Extraction : TF-IDF <br>
-Model              : Multinomial Naive Bayes <br>
+Googgle Collab Link: 
 
-## Result
-| Training   | Score |
-| :--------  | :---- |
-| Accuracy   | 91.88 |
-| Precision  | 92.20 |
-| F1         | 91.87 |
-| Recall     | 91.90 |
-
-| Testing    | Score |
-| :--------  | :---- |
-| Accuracy   | 87.42 |
-| Precision  | 88.95 |
-| F1         | 87.30 |
-| Recall     | 87.46 |
-
-(Penjelasan About & Result akan diubah setelah mendapatkan hasil final).
-
-## Local Deployment (For Windows)
+## Local Deployment
   * Clone project
-  * Go to the folder application using cd command on your cmd
+  * Go to the folder application
+  * Run `pip install -r requirements.txt` to install all python libraries needed for the web application.
+
+    Note (Optional):  create a virtual environment with virtualenv to prevent **dependencies conflict**
   * Run `python app.py` and access the webapp on localhost port 3000 (http://localhost:3000/).
 
 ## Authors
