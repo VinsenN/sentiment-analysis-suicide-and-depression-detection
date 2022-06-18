@@ -1,7 +1,7 @@
 # Sentiment Analysis: Suicide and Depression Detection
 Web Application Link: https://suicide-depression-detection.herokuapp.com
 
-Googgle Collab Link: 
+Googgle Collab Link: __________
 
 ## Local Deployment
   * Clone project
