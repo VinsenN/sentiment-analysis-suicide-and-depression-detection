@@ -1,5 +1,29 @@
+import contractions
+import math
+import nltk
+import numpy as np
+import pandas as pd
+import pickle
+import re
+import spacy
+import string
+import unicodedata
+
+from collections import Counter
+
+from copy import deepcopy
+
 from gensim.models import Word2Vec
+from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from gensim.utils import effective_n_jobs
+
+from itertools import product
+
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+
+from collections import Counter
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import plot_confusion_matrix, accuracy_score, classification_report, precision_score, f1_score, recall_score
