@@ -1,15 +1,8 @@
 from flask import Flask, request, render_template
 
 from models.preprocess import preprocess_all
-from models.vectorizer import get_w2v_arr, get_d2v_arr
 from models.sklearn_model import SKLearn_Model
 import pickle
-import numpy as np
-
-from gensim.models import Word2Vec
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-
-from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
 class_model = pickle.load(open('models/svm_tfidf.obj.','rb'))
