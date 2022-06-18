@@ -14,6 +14,10 @@ from nltk.tokenize import word_tokenize
 
 from collections import Counter
 
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
 # résumé -> resume
 def remove_accent(text):
     return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8', 'ignore')
