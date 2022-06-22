@@ -1,4 +1,4 @@
-# Sentiment Analysis: Suicide and Depression Detection - Group 7
+# Sentiment Analysis: Suicide and Depression Detection - Group 6
 
 Web Application Deployment Link: https://suicide-depression-detection.herokuapp.com
 
