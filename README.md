@@ -1,4 +1,4 @@
-# Sentiment Analysis: Suicide and Depression Detection
+# Sentiment Analysis: Suicide and Depression Detection - Group 7
 
 Googgle Collab Link: https://colab.research.google.com/drive/1e18fWqNEGfd_SFfDvIOH_HEphZO5lbbV?usp=sharing
 
