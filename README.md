@@ -12,10 +12,10 @@ Model Experiment: [model_experiment.ipnyb](model_experiment.ipynb)
   * Run `python app.py` and access the webapp on localhost port 3000 (http://localhost:3000/).
 
 ## Authors
-|            <img src="assets/github/2440030582.jpg" height="200px"/>             |       <img src="assets/github/2440031521.jpg" height="200px"/>       |       <img src="assets/github/2440022504.jpg" height="200px"/>          | 
-| :-----------------------------------------------------------------------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------:| 
-|                             Gregorius Emmanuel Henry                            |                    Vinsen Nawir                                      |                    Bobby Susanto Ali                                    | 
-|                                    2440030582                                   |                     2440031521                                       |                     2440022504                                          | 
+|            <img src="assets/github/2440030582.jpg" height="200px"/>                         |       <img src="assets/github/2440031521.jpg" height="200px"/>       |       <img src="assets/github/2440022504.jpg" height="200px"/>          | 
+| :--------------------------------------------------------------------------------------:    | :------------------------------------------------------------------: | :----------------------------------------------------------------------:| 
+|                             [Gregorius Emmanuel Henry](https://github.com/jfcjaya)          |                    [Vinsen Nawir](https://github.com/VinsenN)        |          [Bobby Susanto Ali](https://github.com/bobbysusantoali)        | 
+|                                    2440030582                                               |                     2440031521                                       |                     2440022504                                          | 
 
 
 ## Special Thanks
