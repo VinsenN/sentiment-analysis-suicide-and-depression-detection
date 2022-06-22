@@ -1,7 +1,8 @@
 # Sentiment Analysis: Suicide and Depression Detection
-Web Application Link: https://suicide-depression-detection.herokuapp.com
 
-Googgle Collab Link: __________
+Googgle Collab Link: https://colab.research.google.com/drive/1e18fWqNEGfd_SFfDvIOH_HEphZO5lbbV?usp=sharing
+
+Web Application Deployment Link: https://suicide-depression-detection.herokuapp.com
 
 ## Local Deployment
   * Clone project
@@ -11,14 +12,14 @@ Googgle Collab Link: __________
   * Run `python app.py` and access the webapp on localhost port 3000 (http://localhost:3000/).
 
 ## Authors
-|       <img src="assets/github/2440022504.jpg" height="200px"/>           |            <img src="assets/github/2440030582.jpg" height="200px"/>             |       <img src="assets/github/2440031521.jpg" height="200px"/>       |
-| :----------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :------------------------------------------------------------------: |
-|                    Bobby Susanto Ali                                     |                             Gregorius Emmanuel Henry                            |                    Vinsen Nawir                                      |
-|                     2440022504                                           |                                    2440030582                                   |                     2440031521                                       |
+|            <img src="assets/github/2440030582.jpg" height="200px"/>             |       <img src="assets/github/2440031521.jpg" height="200px"/>       |       <img src="assets/github/2440022504.jpg" height="200px"/>          | 
+| :-----------------------------------------------------------------------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------:| 
+|                             Gregorius Emmanuel Henry                            |                    Vinsen Nawir                                      |                    Bobby Susanto Ali                                    | 
+|                                    2440030582                                   |                     2440031521                                       |                     2440022504                                          | 
+
 
 ## Special Thanks
-Muhammad Amien Ibrahim, S.Kom., M.Sc. - D6580 <br>
-As lecturer
+Muhammad Amien Ibrahim, S.Kom., M.Sc. - D6580 as lecturer
 
 ## Extra Detail
 | Course                                     | Class |
