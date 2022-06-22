@@ -1,8 +1,8 @@
 # Sentiment Analysis: Suicide and Depression Detection - Group 7
 
-Googgle Collab Link: https://colab.research.google.com/drive/1e18fWqNEGfd_SFfDvIOH_HEphZO5lbbV?usp=sharing
-
 Web Application Deployment Link: https://suicide-depression-detection.herokuapp.com
+
+Model Experiment: [model_experiment.ipnyb](model_experiment.ipynb)
 
 ## Local Deployment
   * Clone project
